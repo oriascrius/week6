@@ -49,10 +49,10 @@ header {
   .btn:hover {
     color: #406c55;
   }
-}
-// 大視窗
-@media (min-width: 992px) {
-  .container {
-    border-bottom: 1px solid #adb5bd;
+  // 大視窗
+  @media (min-width: 992px) {
+    .container {
+      border-bottom: 1px solid #adb5bd;
+    }
   }
 }
