@@ -1,0 +1,57 @@
+.login {
+  ::placeholder {
+    color: #adb5bd;
+  }
+  .form-control:focus {
+    outline: none; /* 去掉默認的 focus 樣式 */
+    box-shadow: none; /* 去掉藍色的 box-shadow */
+    border-color: #343a40;
+  }
+  // 控制中間有文字的線條
+  .text-line {
+    position: relative;
+    text-align: center;
+  }
+  .text-line::before,
+  .text-line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 30%; /* 調整這個值以確保中間留出足夠空間 */
+    height: 1px; /* 線條的高度 */
+    background-color: #dee2e6; /* 線條的顏色 */
+  }
+  .text-line::before {
+    left: 0;
+  }
+  .text-line::after {
+    right: 0;
+  }
+  .text-line span {
+    display: inline-block;
+    padding: 0 10px; /* 根據需要調整留出的空間，確保線條不會與文字重疊 */
+    background-color: transparent; /* 確保文字背景透明 */
+  }
+  .other-login {
+    color: #52525b;
+    background-color: #e9ecef;
+    &:hover {
+      background-color: #dee2e6;
+    }
+  }
+  .login-footer {
+    color: #212121;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .login {
+    padding: 60px 0 60px 0;
+  }
+}
+@media (min-width: 992px) {
+  .login {
+    padding: 100px 0 100px 0;
+  }
+}

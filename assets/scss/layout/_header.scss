@@ -1,0 +1,58 @@
+// 搜尋框設定
+header {
+  .input-group {
+    max-width: 276px;
+    border-radius: 100px;
+    // 小視窗
+    @media (max-width: 991px) {
+      margin: auto;
+      max-width: 100%;
+      padding: 8px 20px 8px 20px;
+      border: 0;
+    }
+    // 大視窗
+    @media (min-width: 992px) {
+      padding: 12px 20px 12px 20px;
+      .form-control {
+        font-weight: 600;
+      }
+    }
+  }
+  .search-text {
+    color: #dee2e6;
+  }
+  // focus 搜尋框時設定
+  .input-group:focus-within .search-text {
+    color: #212529;
+    font-weight: bold;
+  }
+  #search:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+  }
+
+  // 漢堡選單
+  // 小視窗
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      margin-top: 10px;
+    }
+    .input-group {
+      margin-bottom: 24px;
+    }
+    .nav-item {
+      width: 100%;
+      padding-bottom: 24px;
+    }
+  }
+  .btn:hover {
+    color: #406c55;
+  }
+}
+// 大視窗
+@media (min-width: 992px) {
+  .container {
+    border-bottom: 1px solid #adb5bd;
+  }
+}

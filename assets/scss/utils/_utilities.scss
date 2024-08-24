@@ -1,0 +1,37 @@
+// - 文字的通用樣式預設無法響應式變化，是因為 ref 功能，會隨著視窗縮放變換數字，所以要改如下兩點
+// - 1.需要更改 `responsive` 屬性，修改方式可參考 [Bootstrap - Utilities API](https://getbootstrap.com/docs/5.2/utilities/api/)
+// Utilities API - Using the API - Enable responsive
+// 複製貼上，記得修改默認是 border，改成要改掉的，這裡要改的是 font-size
+// 2.去 scss - utils - _variables.scss - $enable-rfs: true !default; 改掉全域變數為 false
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+// 針對首頁左上右下圓角
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded-top-left": (
+      property: border-top-left-radius,
+      class: rounded-top-left,
+      values: (
+        1: $border-radius-xl,
+      ),
+    ),
+    "rounded-bottom-right": (
+      property: border-bottom-right-radius,
+      class: rounded-bottom-right,
+      values: (
+        1: $border-radius-xl,
+      ),
+    ),
+  )
+);

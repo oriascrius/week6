@@ -1,0 +1,462 @@
+.btn:hover {
+  color: #406c55;
+}
+// 1.banner - 文字設定
+/* 大视窗下使用 translate-middle-y */
+@media (min-width: 992px) {
+  .banner-text {
+    top: 50%;
+    transform: translateY(-50%);
+    h3,
+    button {
+      font-weight: bolder;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .banner-text {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3,
+    button {
+      font-weight: bold;
+    }
+  }
+}
+
+// -------------------------------------------------------------
+
+// 2.熱門主題 - 卡片設定
+.theme-card {
+  border-radius: 20px 0 20px 0;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // 透明
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    // 根據設計稿 #212529 ， 40%
+    background: rgba($color: #212529, $alpha: 0.4);
+    // opacity 属性的值范围是 0 到 1，0 表示完全透明，1 表示完全不透明。
+    // .5s: 表示过渡效果持续的时间。这里的 .5s 表示 0.5 秒。
+    transition: opacity 0.5s;
+  }
+  // 遮罩
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+// -------------------------------------------------------------
+
+// 3.精選文章
+@media (max-width: 991px) {
+  .article {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .article-pagination {
+    display: flex;
+    padding-top: 40px;
+    align-items: center;
+    width: 100%;
+    justify-content: end;
+    .swiper-pagination-custom-article {
+      width: 25%;
+      padding-bottom: 0;
+      margin-right: auto;
+    }
+  }
+  .article-title-sm {
+    display: block;
+  }
+  .article-title-lg {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .article-title-sm {
+    display: none;
+  }
+  .article-title-lg {
+    display: block;
+  }
+}
+.swiper-pagination-custom-article {
+  padding-bottom: 32px;
+}
+.swiper-pagination {
+  width: 232px;
+  position: relative;
+}
+.swiper-pagination::after {
+  content: "";
+  width: 80px;
+  height: 1px;
+  background-color: #6c757d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-prev,
+.swiper-next {
+  border-radius: 100px;
+  padding: 4px 16px 4px 16px;
+}
+.swiper-prev:hover {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+.swiper-next:hover {
+  background-color: #6c757d;
+  color: #dee2e6;
+}
+.mySwiper-article a {
+  text-decoration: none;
+}
+.article-more {
+  color: #569573;
+  &:hover {
+    color: #406c55;
+  }
+}
+.article-member {
+  background-color: #e8e3da;
+  color: #6e6b67;
+  &:hover {
+    background-color: #6e6b67;
+    color: #ffffff;
+  }
+}
+.mySwiper-tab {
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+}
+
+// -------------------------------------------------------------
+
+// 4.母親節折價
+.subscribe-content {
+  h3 {
+    color: #6e6b67;
+  }
+  h2 {
+    color: #343a40;
+  }
+  li {
+    color: #6c757d;
+  }
+  .btn {
+    font-weight: 900;
+  }
+  // 小視窗
+  @media (max-width: 991px) {
+    h3 {
+      color: #569573;
+      font-weight: 700;
+    }
+    .btn {
+      font-weight: 700;
+    }
+  }
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    content: "";
+    display: block;
+    width: 217px;
+    height: 76px;
+    background-image: url("../images/bg-1.png");
+  }
+  &::after {
+    position: absolute;
+    right: -20px;
+    bottom: -80px;
+    content: "";
+    display: block;
+    width: 300px;
+    height: 185px;
+    background-image: url("../images/bg-2.png");
+  }
+}
+// 小視窗
+@media (max-width: 991px) {
+  .subscribe-content {
+    &::before {
+      display: none;
+    }
+    &::after {
+      position: absolute;
+      right: -30px;
+      bottom: -48px;
+      content: "";
+      display: block;
+      width: 140px;
+      height: 95px;
+      background-image: url("../images/bg-2-sm.png");
+    }
+  }
+}
+
+// -------------------------------------------------------------
+
+// 5.路跑地圖  有問題---------------------------------------
+.map-nav-link {
+  box-shadow: 0px 2px 8px 0px #6e6b6714;
+  font-weight: 900;
+  .nav-link {
+    border-radius: 4px;
+  }
+  .nav-link.active {
+    color: #569573;
+  }
+  li:hover {
+    background-color: #e0efde;
+  }
+  // 小視窗
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+.map-list-img {
+  li:nth-child(-n + 3) {
+    padding-right: 4px;
+  }
+  li:nth-child(1) img {
+    border-radius: 20px 0px 4px 20px;
+  }
+  li:nth-child(2) img {
+    border-radius: 4px;
+  }
+  li:nth-child(3) img {
+    border-radius: 4px;
+  }
+  li:nth-child(4) img {
+    border-radius: 0px 20px 20px 0px;
+  }
+  // md 視窗
+  @media (max-width: 991px) {
+    li:nth-child(1)img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    li:nth-child(2) img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    li:nth-child(3) img {
+      display: none;
+    }
+    li:nth-child(4) img {
+      display: none;
+    }
+  }
+  // sm 視窗
+  @media (max-width: 767px) {
+    li:nth-child(1)img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    li:nth-child(2) img {
+      display: none;
+    }
+    li:nth-child(3) img {
+      display: none;
+    }
+    li:nth-child(4) img {
+      display: none;
+    }
+  }
+}
+.map-content {
+  box-shadow: 0px 2px 8px 0px #6e6b6714;
+  li:hover {
+    color: #569573;
+  }
+}
+.map-footer {
+  display: flex;
+  justify-content: space-between;
+}
+// 小視窗
+@media (max-width: 991px) {
+  .map-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.map-footer-tab {
+  text-decoration: none;
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: #e8e3da;
+  color: #6e6b67;
+  &:hover {
+    background-color: #6e6b67;
+    color: #ffffff;
+  }
+}
+.view-more a {
+  font-size: 12px;
+  text-decoration: none;
+  &:hover {
+    color: #406c55;
+  }
+}
+
+// -------------------------------------------------------------
+
+// 6.品味生活
+.life-content {
+  li:hover {
+    color: #569573;
+  }
+  a {
+    text-decoration: none;
+    color: #569573;
+    &:hover {
+      color: #406c55;
+    }
+  }
+  @media (min-width: 992px) {
+    font-size: 52px;
+  }
+}
+@media (min-width: 992px) {
+  .life-pagination {
+    margin-right: 28px;
+  }
+}
+@media (max-width: 991px) {
+  .life-pagination {
+    display: none;
+  }
+}
+
+// -------------------------------------------------------------
+
+// 7.熱門行程 遮罩還沒做
+.schedule-text {
+  h3 {
+    color: #6c757d;
+    font-size: 20px;
+    padding-bottom: 16px;
+  }
+  h2 {
+    font-size: 32px;
+    color: #343a40;
+    font-weight: 700;
+  }
+  // 小視窗
+  @media (max-width: 991px) {
+    h3 {
+      color: #343a40;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 900;
+    }
+    .btn {
+      font-weight: 700;
+    }
+  }
+}
+.schedule-img {
+  .btn {
+    border-radius: 4px;
+    top: 0;
+    left: 28px;
+    transform: translateY(-50%);
+  }
+  .schedule-img-footer-sm {
+    bottom: 0;
+    left: 0;
+  }
+  .schedule-img-footer-lg-1 {
+    padding: 30px;
+    bottom: -20px;
+    left: 0;
+  }
+  .schedule-img-footer-lg-2 {
+    padding: 30px;
+    bottom: 25px;
+    left: 0;
+  }
+}
+// .schedule-card {
+//   overflow: hidden;
+//   // position: relative;
+//   &::before {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     // 透明
+//     opacity: 0;
+//     width: 100%;
+//     height: 100%;
+//     // 根據設計稿 #212529 ， 40%
+//     background: rgba($color: #212529, $alpha: 0.4);
+//     // opacity 属性的值范围是 0 到 1，0 表示完全透明，1 表示完全不透明。
+//     // .5s: 表示过渡效果持续的时间。这里的 .5s 表示 0.5 秒。
+//     transition: opacity 0.5s;
+//   }
+//   // 遮罩
+//   &:hover::before {
+//     opacity: 1;
+//   }
+// }
+// 小視窗
+@media (max-width: 991px) {
+  .schedule-text {
+    text-align: center;
+  }
+  .schedule-contect-md {
+    display: flex;
+  }
+  .schedule-contect-lg {
+    display: none;
+  }
+}
+// 大視窗
+@media (min-width: 992px) {
+  .schedule-contect-md {
+    display: none;
+  }
+  .schedule-contect-lg {
+    display: flex;
+  }
+}
+
+// 8.聯絡我們
+.contact {
+  ul {
+    text-align: end;
+  }
+  @media (max-width: 991px) {
+    h2 {
+      padding-bottom: 16px;
+    }
+    h2,
+    ul {
+      text-align: center;
+    }
+  }
+}

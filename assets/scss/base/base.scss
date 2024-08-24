@@ -1,0 +1,50 @@
+// 把 Noto Serif TC 放在 scss - utils - _variables.scss - font-family-sans-serif
+// 把 line-height: 1.5 放在 scss - utils - _variables.scss - line-height-base
+// 這裡就不用寫了
+// body{
+//     font-family: "Noto Serif TC", serif;
+//     line-height: 1.5;
+// }
+
+.eng-font {
+  font-family: "Newsreader", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// a 標籤文字下方不要線條
+// $link-decoration: underline !default;
+// bootstrap 默認設定有修改過，所以這邊不用寫
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+// 通常這裡是設定 margin: 0;
+// 在 scss - utils - _variables.scss - headings-margin-bottom
+// 設計稿有設定字距 10%，所以設定 0.1em
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.1em;
+}
+
+// 通常這裡是設定 margin: 0;
+// 在 scss - utils - _variables.scss - paragraph-margin-bottom
+// 設計稿有設定字距 5%，所以設定 0.05em
+p {
+  letter-spacing: 0.05em;
+}
+
+// .bi {
+//   font-size: 1.25rem;
+//   @include media-breakpoint-up(lg) {
+//     font-size: 1.5rem;
+//   }
+// }
