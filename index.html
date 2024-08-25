@@ -6,10 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>week6-內容訂閱網站</title>
-  <!-- bootstrap - 引入 swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script type="module" crossorigin src="/week6/assets/main-9b76a3f3.js"></script>
-  <link rel="stylesheet" href="/week6/assets/main-f3ccb5a6.css">
+  <script type="module" crossorigin src="/week6/assets/main-6fc24842.js"></script>
+  <link rel="stylesheet" href="/week6/assets/main-db3e0b19.css">
 </head>
 
 <body>
@@ -678,7 +676,7 @@
               </ul>
               <!-- 小尺寸 -->
               <div class="swiper mySwiper-schedule schedule-contect-md">
-                <ul class="swiper-wrapper list-unstyled">
+                <ul class="swiper-wrapper list-unstyled ">
                   <li class="mt-lg-8 position-relative swiper-slide mt-4">
                     <button
                       class="d-flex position-absolute btn text-secondary-300 bg-white border-secondary-100 fs-6 fw-bold py-1 px-2"><i
@@ -762,68 +760,8 @@
     </main>
     <footer class="container px-0">
     <h4 class="text-primary-400 fs-6 py-4 py-lg-5 text-center border-top border-gray-400">©Vivre 2024 All right Reserved</h4>
-</footer>      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      
-      <!-- 3.精選文章 -->
-      <script>
-        const swiper_article = new Swiper(".mySwiper-article", {
-          // 小尺寸
-          slidesPerView: 1, // 一次呈現幾張投影片
-          slidesPerGroup: 1, // 每次滑動移動1張投影片
-          spaceBetween: 24, // 投影片之間的間距
-          pagination: {
-            el: ".swiper-pagination-custom-article", // 分頁元素
-            type: "fraction" // 分頁類型，這裡設為分數形式
-          },
-          navigation: {
-            nextEl: ".swiper-next",
-            prevEl: ".swiper-prev"
-          },
-          breakpoints: {
-            992: { // 大尺寸 (大於 992px) 时的设置
-              slidesPerView: 2, // 在大尺寸时显示一张投影片
-              spaceBetween: 48 // 可调整小尺寸时的间距
-            }
-          }
-        });
-      </script>
-      <!-- 6.品味生活 -->
-      <!-- 分頁沒完成 -->
-      <!-- <script>
-        const swiper_life = new Swiper(".mySwiper-life", {
-          // 小尺寸
-          slidesPerView: 1, // 一次呈現幾張投影片
-          slidesPerGroup: 1, // 每次滑動移動1張投影片
-          spaceBetween: 24, // 投影片之間的間距
-          pagination: {
-            el: ".swiper-pagination-custom-life", // 分頁元素
-            type: "fraction" // 分頁類型，這裡設為分數形式
-          },
-          navigation: {
-            nextEl: ".swiper-next",
-            prevEl: ".swiper-prev"
-          },
-          breakpoints: {
-            992: { // 大尺寸 (大於 992px) 时的设置
-              slidesPerView: 3, // 在大尺寸时显示2张投影片
-              spaceBetween: 24 // 可调整小尺寸时的间距
-            }
-          }
-        });
-      </script> -->
-      <!-- 7.熱門行程 -->
-      <script>
-        const swiper_schedule = new Swiper(".mySwiper-schedule", {
-          loop: false,
-          slidesPerView: 1,
-          breakpoints: {
-            991: {
-              loop: false,
-              slidesPerView: 0,
-            }
-          }
-        });
-      </script>
+</footer>      
+    
 </body>
 
 </html>
