@@ -25,6 +25,11 @@ const swiper_article = new Swiper(".mySwiper-article", {
     },
   },
 });
+// 5.路跑地圖
+const swiper_map = new Swiper(".mySwiper-map", {
+  slidesPerView: 1, // 一次呈現幾張投影片
+  slidesPerGroup: 1, // 每次滑動移動1張投影片
+});
 // 6.品味生活
 const swiper_life = new Swiper(".mySwiper-life", {
   // 小尺寸
