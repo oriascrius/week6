@@ -146,9 +146,9 @@
   background-color: #6c757d;
   color: #dee2e6;
 }
-.mySwiper-article a {
-  text-decoration: none;
-}
+// .mySwiper-article a {
+//   text-decoration: none;
+// }
 .article-more {
   color: #569573;
   &:hover {
@@ -343,7 +343,7 @@
   }
 }
 .map-footer-tab {
-  text-decoration: none;
+  // text-decoration: none;
   padding: 4px 8px 4px 8px;
   border-radius: 4px;
   font-size: 12px;
@@ -357,7 +357,7 @@
 
 .view-more a {
   font-size: 12px;
-  text-decoration: none;
+  // text-decoration: none;
   &:hover {
     color: #406c55;
   }
@@ -371,7 +371,7 @@
     color: #569573;
   }
   a {
-    text-decoration: none;
+    // text-decoration: none;
     color: #569573;
     &:hover {
       color: #406c55;
@@ -429,19 +429,25 @@
   left: 28px;
   transform: translateY(-50%);
 }
+// 圖片上面文字 sm 以下時
 .schedule-img-footer-sm {
   bottom: 0;
   left: 0;
+  z-index: 1060;
 }
+// 圖片上面文字 sm 以上時
 .schedule-img-footer-lg-1 {
   padding: 30px;
   bottom: -20px;
   left: 0;
+  z-index: 1060;
 }
+// 圖片上面文字 sm 以上時
 .schedule-img-footer-lg-2 {
   padding: 30px;
   bottom: 25px;
   left: 0;
+  z-index: 1060;
 }
 // 放在圖片上的按鈕
 .schedule-btn {

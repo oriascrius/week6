@@ -1,4 +1,3 @@
-// 搜尋框設定
 header {
   .input-group {
     max-width: 276px;
@@ -31,19 +30,53 @@ header {
     box-shadow: none;
     border-color: transparent;
   }
-
   // 漢堡選單
   // 小視窗
   @media (max-width: 991px) {
     .navbar-collapse {
-      margin-top: 10px;
+      padding: 0 12px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fffdf5; /* 設置背景顏色 */
+      z-index: 1050; /* 保持在最上層 */
+      min-height: 100vh; /* 確保覆蓋整個視窗 */
+      padding-top: 76px; /* 頂部偏移，避免遮住Logo */
+      overflow: hidden; /* 隱藏滾動條 */
     }
     .input-group {
-      margin-bottom: 24px;
+      background-color: #ffffff;
+    }
+    .navbar-toggler-list {
+      display: block;
+    }
+    .navbar-toggler-close {
+      display: none;
+      position: fixed; /* 固定定位 */
+      top: 20px; /* 距離視窗頂部的距離 */
+      right: 20px; /* 距離視窗右側的距離 */
+      z-index: 1060; /* 確保在其他元素上層 */
     }
     .nav-item {
       width: 100%;
       padding-bottom: 24px;
+    }
+    .nav-link {
+      padding: 12px;
+    }
+    /* 隱藏漢堡選單按鈕 */
+    .navbar-toggler {
+      z-index: 1060; /* 漢堡按鈕仍保持可點擊 */
+    }
+    /* 選單項目居中 */
+    .navbar-nav {
+      align-items: center;
+      justify-content: start;
+      height: 100%; /* 垂直居中 */
+      display: flex;
+      flex-direction: column;
     }
   }
   .btn:hover {

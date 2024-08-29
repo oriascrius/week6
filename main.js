@@ -3,6 +3,37 @@
 import Swiper from "swiper/bundle";
 // import styles bundle
 import "swiper/css/bundle";
+// 漢堡選單切換 icon
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarTogglerList = document.querySelector(".navbar-toggler-list");
+  const navbarTogglerClose = document.querySelector(".navbar-toggler-close");
+
+  // 检测点击事件
+  navbarTogglerList.addEventListener("click", function () {
+    navbarTogglerList.style.display = "none";
+    navbarTogglerClose.style.display = "block";
+  });
+
+  navbarTogglerClose.addEventListener("click", function () {
+    navbarTogglerList.style.display = "block";
+    navbarTogglerClose.style.display = "none";
+  });
+
+  // 监听collapse的事件，以防用户点击外部区域来关闭菜单
+  document
+    .querySelector("#navbarSupportedContent")
+    .addEventListener("hidden.bs.collapse", function () {
+      navbarTogglerList.style.display = "block";
+      navbarTogglerClose.style.display = "none";
+    });
+
+  document
+    .querySelector("#navbarSupportedContent")
+    .addEventListener("shown.bs.collapse", function () {
+      navbarTogglerList.style.display = "none";
+      navbarTogglerClose.style.display = "block";
+    });
+});
 //  3.精選文章
 const swiper_article = new Swiper(".mySwiper-article", {
   // 小尺寸

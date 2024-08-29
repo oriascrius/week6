@@ -21,6 +21,7 @@ img {
 a {
   color: inherit;
   display: inline-block;
+  text-decoration: none;
 }
 
 // 通常這裡是設定 margin: 0;
@@ -42,6 +43,16 @@ p {
   letter-spacing: 0.05em;
 }
 
+// .overflow-x {
+//   overflow-x: hidden;
+// }
+
+/* 確保頁面在打開選單時不顯示滾動條 */
+// html,
+// body {
+//   overflow: hidden; /* 隱藏整個頁面的滾動條 */
+//   height: 100%; /* 確保頁面高度為 100% */
+// }
 // .bi {
 //   font-size: 1.25rem;
 //   @include media-breakpoint-up(lg) {
